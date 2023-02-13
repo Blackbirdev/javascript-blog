@@ -1,17 +1,12 @@
 // Console strict
-'use strict'
+'use strict';
 
-// document.getElementById('test-button').addEventListener('click', function(){
-//     const links = document.querySelectorAll('.titles a');
-//     console.log('links:', links);
-//   });
 
 const titleClickHandler = function (event) {
-    console.log('Link was clicked!');
-    // console.log(event);
-
     event.preventDefault();
     const clickedElement = this;
+    console.log('Link was clicked!');
+    // console.log(event);
 
     /* [DONE] remove class 'active' from all article links  */
     const activeLinks = document.querySelectorAll('.titles a.active');
@@ -33,12 +28,15 @@ const titleClickHandler = function (event) {
 
     /* [DONE] get 'href' attribute from the clicked link */
     const articleSelector = clickedElement.getAttribute('href');
-    console.log(articleSelector);
+    console.log('Href attribute get from the clicked link: ' + articleSelector);
 
-    /* find the correct article using the selector (value of 'href' attribute) */
+    /* [DONE] find the correct article using the selector (value of 'href' attribute) */
     const targetArticle = document.querySelector(articleSelector);
     console.log('TargetArticle: ' + articleSelector);
-    /* add class 'active' to the correct article */
+
+    /* [DONE] add class 'active' to the correct article */
+    targetArticle.classList.add('active');
+    console.log('Added class active to: ' + articleSelector);
 }
 
 const links = document.querySelectorAll('.titles a');
