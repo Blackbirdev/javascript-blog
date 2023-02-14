@@ -70,7 +70,10 @@ function generateTitleLinks() {
         /* [DONE] find the title element */
         const articleTitle = article.querySelector(optTitleSelector).innerHTML;
         console.log('Find the title element: ' + articleTitle);
-        /* get the title from the title element */
+
+        /* [DONE] get the title from the title element */
+        const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+        console.log('get the title from the title element: ' + linkHTML);
 
         /* create HTML of the link */
 
