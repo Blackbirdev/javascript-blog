@@ -104,9 +104,10 @@ function generateTags() {
     let html = '';
     /* [DONE] get tags from data-tags attribute */
     const articleTags = article.getAttribute('data-tags');
-    console.log('DATA_TAGS ' + articleTags);
-    /* split tags into array */
-
+    console.log('DATA_TAGS: ' + articleTags);
+    /* [DONE] split tags into array */
+    const articleTagsArray = articleTags.split(' ');
+    console.log('SPLIT_TAGS: ' + articleTagsArray);
     /* START LOOP: for each tag */
 
     /* generate HTML of the link */
