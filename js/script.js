@@ -116,7 +116,8 @@ function generateTags() {
       /* add generated code to html variable */
       html = html + linkHTML;
       /* END LOOP: for each tag */
-      // console.log('TAG_TEST ' + html);
+      console.log('TAG_TEST ' + html);
+      tags.innerHTML = html;
     }
     /* insert HTML of all the links into the tags wrapper */
 
