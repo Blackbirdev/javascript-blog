@@ -108,19 +108,18 @@ function generateTags() {
     /* [DONE] split tags into array */
     const articleTagsArray = articleTags.split(' ');
     console.log('SPLIT_TAGS: ' + articleTagsArray);
-    /* START LOOP: for each tag */
+    /* [DONE] START LOOP: for each tag */
     for (let tag of articleTagsArray) {
-      /* generate HTML of the link */
+      /* [DONE] generate HTML of the link */
       const linkHTML = '<li><a href="#tag-' + tag + '"><span>' + tag + '</span></a></li>';
       console.log('GENERATE_HTML_FOR_TAGS: ' + linkHTML);
-      /* add generated code to html variable */
+      /* [DONE] add generated code to html variable */
       html = html + linkHTML;
-      /* END LOOP: for each tag */
+      /* [DONE] END LOOP: for each tag */
       console.log('TAG_TEST ' + html);
-      tags.innerHTML = html;
     }
-    /* insert HTML of all the links into the tags wrapper */
-
+    /* [DONE] insert HTML of all the links into the tags wrapper */
+    tags.innerHTML = html;
     /* END LOOP: for every article: */
   }
 }
