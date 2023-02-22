@@ -115,4 +115,29 @@ body {
 .post-tags p {
   margin: 0 10px 0 0;
 }
+
+/* Sidebar */
+.tag-size-1 {
+  font-size: 15px;
+  color: #f5ba86;
+}
+
+.tag-size-2 {
+  font-size: 18px;
+  color: #59bcd4;
+}
+
+.tag-size-3 {
+  font-size: 21px;
+  color: yellowgreen;
+}
+
+.tag-size-4 {
+  font-size: 24px;
+}
+
+.tag-size-5 {
+  font-size: 28px;
+  color: #ea5454;
+}
 /*# sourceMappingURL=style.css.map */
