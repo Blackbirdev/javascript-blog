@@ -218,7 +218,8 @@ function authorClickHandler(event) {
   const href = clickedElement.getAttribute('href');
   console.log('Get attribute href on clickedElement: ' + href);
   /* make a new constant "author" and extract author from the "href" constant */
-
+  const author = href.replace('#author-', '');
+  console.log('Clicked author ' + author);
   /* find all tag links with class active */
 
   /* START LOOP: for each active author link */
@@ -238,7 +239,6 @@ function authorClickHandler(event) {
   /* execute function "generateTitleLinks" with article selector as argument */
 
 }
-// onclick = authorClickHandler;
 function addClickListenersToAuthors() {
   /* find all links to authors */
 
