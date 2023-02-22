@@ -181,7 +181,6 @@ addClickListenersToTags();
 // GENERATE AUTHORS
 
 function generateAuthors() {
-  console.log('Function enabled');
   /* [DONE] find all articles */
   const articles = document.querySelectorAll(optArticleSelector);
   /* [DONE] START LOOP: for every articles */
@@ -209,13 +208,15 @@ generateAuthors();
 //  AUTHOR CLICK HANDLER
 
 function authorClickHandler(event) {
+  console.log('FUNCTION ENABLED');
   /* [DONE] prevent default action for this event */
   event.preventDefault();
   /* [DONE] make new constant named "clickedElement" and give it the value of "this" */
   const clickedElement = this;
   console.log('Author was clicked!');
   /* make a new constant "href" and read the attribute "href" of the clicked element */
-
+  const href = clickedElement.getAttribute('href');
+  console.log('Get attribute href on clickedElement: ' + href);
   /* make a new constant "author" and extract author from the "href" constant */
 
   /* find all tag links with class active */
@@ -235,8 +236,9 @@ function authorClickHandler(event) {
   /* END LOOP: for each found author link */
 
   /* execute function "generateTitleLinks" with article selector as argument */
-}
 
+}
+// onclick = authorClickHandler;
 function addClickListenersToAuthors() {
   /* find all links to authors */
 
@@ -246,7 +248,6 @@ function addClickListenersToAuthors() {
 
   /* END LOOP: for each link */
 }
-
 addClickListenersToAuthors();
 
 
