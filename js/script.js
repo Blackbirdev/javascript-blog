@@ -231,11 +231,12 @@ function authorClickHandler(event) {
   /* find all author links with "href" attribute equal to the "href" constant */
   const targetAuthors = document.querySelectorAll('a[href="' + href + '"]');
   /* START LOOP: for each found author link */
-
-  /* add class active */
-
-  /* END LOOP: for each found author link */
-
+  for (targetAuthor of targetAuthors) {
+    /* add class active */
+    targetAuthor.classList.add('active');
+    console.log('Target author ' + targetAuthor);
+    /* END LOOP: for each found author link */
+  }
   /* execute function "generateTitleLinks" with article selector as argument */
 
 }
