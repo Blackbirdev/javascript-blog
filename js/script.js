@@ -237,17 +237,18 @@ function authorClickHandler(event) {
     console.log('Target author ' + targetAuthor);
   } /* END LOOP: for each found author link */
   /* execute function "generateTitleLinks" with article selector as argument */
-  generateTitleLinks('[data-author ="' + author + '"]');
+  generateTitleLinks('[data-author="' + author + '"]');
 }
 function addClickListenersToAuthors() {
   /* find all links to authors */
   const authorLinks = document.querySelectorAll('a[href^="#author-"]');
   console.log('Author links ' + authorLinks);
   /* START LOOP: for each link */
-
-  /* add authorClickHandler as event listener for that link */
-
-  /* END LOOP: for each link */
+  for (let authorLink of authorLinks) {
+    /* add authorClickHandler as event listener for that link */
+    authorLink.addEventListener('click', authorClickHandler);
+    /* END LOOP: for each link */
+  }
 }
 addClickListenersToAuthors();
 
