@@ -229,7 +229,7 @@ function authorClickHandler(event) {
     activeAuthor.classList.remove('active');
   }  /* END LOOP: for each active author link */
   /* find all author links with "href" attribute equal to the "href" constant */
-
+  const targetAuthors = document.querySelectorAll('a[href="' + href + '"]');
   /* START LOOP: for each found author link */
 
   /* add class active */
