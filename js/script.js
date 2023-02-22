@@ -92,8 +92,8 @@ generateTitleLinks();
 
 function generateTags() {
   console.log('Generate tags function');
-  /* [NEW] create a new variable allTags with an empty array */
-  let allTags = [];
+  /* [NEW] create a new variable allTags with an empty object */
+  let allTags = {};
 
   /* [DONE] find all articles */
   const articles = document.querySelectorAll(optArticleSelector);
