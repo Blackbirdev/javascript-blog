@@ -209,10 +209,11 @@ generateAuthors();
 //  AUTHOR CLICK HANDLER
 
 function authorClickHandler(event) {
-  /* prevent default action for this event */
+  /* [DONE] prevent default action for this event */
   event.preventDefault();
-  /* make new constant named "clickedElement" and give it the value of "this" */
-
+  /* [DONE] make new constant named "clickedElement" and give it the value of "this" */
+  const clickedElement = this;
+  console.log('Author was clicked!');
   /* make a new constant "href" and read the attribute "href" of the clicked element */
 
   /* make a new constant "author" and extract author from the "href" constant */
