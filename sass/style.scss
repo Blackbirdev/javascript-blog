@@ -128,6 +128,13 @@ body {
 
 /* Sidebar */
 
+.tags {
+    li {
+        display: inline-block;
+        margin: 0 3px 0 0;
+    }
+}
+
 .tag-size-1 {
     font-size: 15px;
     color: rgb(245, 186, 134);
@@ -139,16 +146,11 @@ body {
 }
 
 .tag-size-3 {
-    font-size: 21px;
+    font-size: 22px;
     color: yellowgreen;
 }
 
-.tag-size-4 {
-    font-size: 24px;
-
-}
-
 .tag-size-5 {
-    font-size: 28px;
+    font-size: 29px;
     color: rgb(234, 84, 84);
 }
