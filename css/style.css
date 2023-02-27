@@ -6,6 +6,8 @@
 *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
 body {
@@ -20,6 +22,7 @@ body {
 .container {
   max-width: 1140px;
   margin: 0 auto;
+  background-color: #efefef;
 }
 
 .section-title {
@@ -33,6 +36,11 @@ body {
   text-transform: none;
   font-weight: 400;
   color: #777777;
+}
+
+a,
+a:visited {
+  color: blue;
 }
 
 /* Layout */
@@ -53,6 +61,7 @@ body {
   -webkit-box-flex: 2;
       -ms-flex: 2 0 0px;
           flex: 2 0 0;
+  position: relative;
 }
 
 .sidebar,
@@ -64,13 +73,21 @@ body {
   border-radius: 5px;
 }
 
+/* Header image*/
+.header-img {
+  background-image: url("https://cdn.pixabay.com/photo/2017/01/22/19/12/pizza-2000600_960_720.jpg");
+  margin: 0 0 20px 0;
+  background-size: fill;
+}
+
 /* Logo */
 .logo {
   font-family: "Sacramento", cursive;
   font-weight: 400;
-  font-size: 104px;
+  font-size: 130px;
   line-height: 1;
   text-align: center;
+  color: #393939;
 }
 
 /* Lists */
@@ -95,11 +112,16 @@ body {
 
 /* Post */
 .post {
-  display: none;
+  position: absolute;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  opacity: 0;
+  z-index: 2;
 }
 
 .post.active {
-  display: block;
+  opacity: 1;
+  z-index: 1;
 }
 
 .post-author {

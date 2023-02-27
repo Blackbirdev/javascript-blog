@@ -12,7 +12,9 @@
 <body>
   <div class="blog">
     <div class="container">
+      <div class="header-img">
       <h1 class="logo">my blog</h1>
+    </div>
       <main class="wrapper">
         <aside class="sidebar">
           <h2 class="section-title">All posts</h2>
@@ -217,10 +219,7 @@
                 id lacinia posuere, felis elit pharetra urna, at feugiat est orci sit amet libero. Quisque in nisl est.
                 Nullam vehicula at lectus non luctus. Cras aliquam neque magna, at varius nisi egestas ut.</p>
 
-              <p>Rhoncus purus nulla, non auctor lacus placerat ut. Aliquam condimentum eget magna ac gravida. Etiam
-                egestas faucibus urna et finibus. Cras vel tellus vel magna suscipit euismod. Maecenas id arcu ante.
-                Duis iaculis scelerisque erat, at ullamcorper arcu consectetur eu. Fusce aliquam diam at arcu pharetra,
-                vel fermentum nunc lobortis.</p>
+              <p>Rhoncus purus nulla, non auctor lacus placerat ut. Aliquam condimentum eget magna ac gravida.</p>
             </div>
             <div class="post-tags">
               <p><strong>Tags:</strong></p>
@@ -266,7 +265,7 @@
   </script>
   <!-- JS - Tag-link handlebars template -->
   <script id="template-tag-link" type="text/x-handlebars-template">
-    <li><a href="#tag-{{ tagName }}"><span>{{ tagName }}</span></a></li>
+    <li><a href="#tag-{{ tagName }}"><span>#{{ tagName }}</span></a></li>
   </script>
   <!-- JS - Author-link handlebars template -->
   <script id="template-author-link" type="text/x-handlebars-template">
