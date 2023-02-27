@@ -166,7 +166,7 @@ function generateTags() {
       /* [DONE] generate HTML of the link */
 
       // const linkHTML = '<li><a href="#tag-' + tag + '">#<span>' + tag + '</span></a></li>';
-      const linkHTMLData = { id: tag, title: tag };
+      const linkHTMLData = { tagName: tag };
       const linkHTML = templates.tagLink(linkHTMLData);
       console.log('Generate html for tags: ' + linkHTML);
 
@@ -293,7 +293,8 @@ function generateAuthors() {
     console.log('data-author: ' + articleAuthor);
 
     /* [DONE] Generate html of the link */
-    const linkHTMLData = { id: articleAuthor, title: articleAuthor };
+    const linkHTMLData = { authorName: articleAuthor };
+    console.log('show linkHTMLData ', linkHTMLData);
     const authorLinkHTML = templates.authorLink(linkHTMLData);
     console.log('Generate html for authors: ' + authorLinkHTML);
 
@@ -334,6 +335,7 @@ function generateAuthors() {
   } /* [NEW] END LOOP: for each author in allAuthors: */
   /*[NEW] add HTML from allAuthorsHTML to authorList */
   authorList.innerHTML = templates.authorCloudLink(allAuthorsData);
+  console.log('Show authorList.innerHTML: ', authorList);
 }
 generateAuthors();
 
@@ -377,6 +379,7 @@ function authorClickHandler(event) {
 
   /* [DONE] execute function "generateTitleLinks" with article selector as argument */
   generateTitleLinks('[data-author="' + author + '"]');
+  console.log('GenerateTitleLinks: ', generateTitleLinks);
 }
 function addClickListenersToAuthors() {
   /* [DONE] find all links to authors */
@@ -387,6 +390,7 @@ function addClickListenersToAuthors() {
   for (let authorLink of authorLinks) {
     /* [DONE] add authorClickHandler as event listener for that link */
     authorLink.addEventListener('click', authorClickHandler);
+    // console.log('show authorLink: ', authorLink);
     /* [DONE] END LOOP: for each link */
   }
 }
